@@ -1,41 +1,81 @@
 <template>
   <view class="content">
-    <image class="logo" src="/static/logo.png" />
-    <view class="text-area">
-      <text class="title">{{ title }}</text>
+    <view class="uni-margin-wrap">
+      <swiper class="swiper" circular :indicator-dots="swiperOpt.indicatorDots" :autoplay="swiperOpt.autoplay"
+        :interval="swiperOpt.interval" :duration="swiperOpt.duration">
+        <swiper-item>
+          <view class="swiper-item uni-bg-red">A</view>
+        </swiper-item>
+        <swiper-item>
+          <view class="swiper-item uni-bg-green">B</view>
+        </swiper-item>
+        <swiper-item>
+          <view class="swiper-item uni-bg-blue">C</view>
+        </swiper-item>
+      </swiper>
     </view>
+
   </view>
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
-const title = ref('Home')
+import { reactive, ref } from 'vue'
+const swiperOpt = reactive({
+  background: ['color1', 'color2', 'color3'],
+  indicatorDots: true,
+  autoplay: true,
+  interval: 2000,
+  duration: 500
+})
 </script>
 
-<style>
-.content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+<style scoped lang="scss">
+.uni-margin-wrap {
+  box-sizing: border-box;
+  width: 690rpx;
+  width: 100%;
+  padding: 8px;
+
+  .uni-bg-red {
+    background-color: red;
+  }
+
+  .uni-bg-green {
+    background-color: green;
+  }
+
+  .uni-bg-blue {
+    background-color: blue;
+  }
 }
 
-.logo {
-  height: 200rpx;
-  width: 200rpx;
-  margin-top: 200rpx;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 50rpx;
+.swiper {
+  height: 300rpx;
 }
 
-.text-area {
-  display: flex;
-  justify-content: center;
+.swiper-item {
+  display: block;
+  height: 300rpx;
+  line-height: 300rpx;
+  text-align: center;
 }
 
-.title {
-  font-size: 36rpx;
-  color: #8f8f94;
+.swiper-list {
+  margin-top: 40rpx;
+  margin-bottom: 0;
 }
-</style>
+
+.uni-common-mt {
+  margin-top: 60rpx;
+  position: relative;
+}
+
+.info {
+  position: absolute;
+  right: 20rpx;
+}
+
+.uni-padding-wrap {
+  width: 550rpx;
+  padding: 0 100rpx;
+}</style>

@@ -20,6 +20,12 @@
 		"navigationBarBackgroundColor": "#F8F8F8",
 		"backgroundColor": "#F8F8F8"
 	},
+	"easycom": {
+		"autoscan": true,
+		"custom": {
+			"fui-(.*)": "firstui-uni/firstui/fui-$1/fui-$1.vue"
+		}
+	},
 	"tabBar": {
 		"color": "#C9C9C9",
 		"selectedColor": "#8B5CFF",

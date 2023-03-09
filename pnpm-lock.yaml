@@ -21,6 +21,7 @@ specifiers:
   '@gatomis/vxios': ^1.0.1-beta.35
   '@types/node': ^18.7.23
   '@vue/tsconfig': ^0.1.3
+  firstui-uni: ^1.8.0
   sass: ^1.58.3
   sass-loader: ^13.2.0
   typescript: ^4.9.4
@@ -43,6 +44,7 @@ dependencies:
   '@dcloudio/uni-mp-weixin': 3.0.0-alpha-3061620221230002_vue@3.2.47
   '@dcloudio/uni-quickapp-webview': 3.0.0-alpha-3061620221230002_vue@3.2.47
   '@gatomis/vxios': 1.0.1-beta.35
+  firstui-uni: 1.8.0
   sass: 1.58.3
   vue: 3.2.47
   vue-i18n: 9.2.2_vue@3.2.47
@@ -1840,6 +1842,10 @@ packages:
     transitivePeerDependencies:
       - supports-color
     dev: true
+
+  /firstui-uni/1.8.0:
+    resolution: {integrity: sha512-WmyFssAtBuHZJpzbJGmY5rOotdmTOZpCS/CgAAh/S5j7GaNjkBMrT95SY5L2wQb0eQM2CHD1Qqkzex8+h4JLlQ==}
+    dev: false
 
   /forwarded/0.2.0:
     resolution: {integrity: sha512-buRG0fpBtRHSTCOASe6hD258tEubFoRLb4ZNA6NxMVHNw2gOcwHo9wyablzMzOA5z9xA9L1KNjk/Nt6MT9aYow==}
