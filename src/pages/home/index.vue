@@ -4,13 +4,13 @@
       <swiper class="swiper" circular :indicator-dots="swiperOpt.indicatorDots" :autoplay="swiperOpt.autoplay"
         :interval="swiperOpt.interval" :duration="swiperOpt.duration">
         <swiper-item>
-          <view class="swiper-item uni-bg-red">A</view>
+          
         </swiper-item>
         <swiper-item>
-          <view class="swiper-item uni-bg-green">B</view>
+          <view class="swiper-item ">B</view>
         </swiper-item>
         <swiper-item>
-          <view class="swiper-item uni-bg-blue">C</view>
+          <view class="swiper-item">C</view>
         </swiper-item>
       </swiper>
     </view>
@@ -19,13 +19,21 @@
 </template>
 
 <script setup lang="ts">
+import { onMounted } from 'vue';
 import { reactive, ref } from 'vue'
+import {getBannerList} from '@/api/banner-api'
 const swiperOpt = reactive({
   background: ['color1', 'color2', 'color3'],
   indicatorDots: true,
   autoplay: true,
   interval: 2000,
   duration: 500
+})
+onMounted(async ()=>{
+ const {data}= await getBannerList()
+ console.log(data);
+ 
+
 })
 </script>
 
